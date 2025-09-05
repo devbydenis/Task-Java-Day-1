@@ -8,7 +8,7 @@ public class Calculator {
             /// /////////////////////////////////////////////////////////////
 
             Scanner scannerValue1 = new Scanner(System.in);
-            System.out.print("Masukan angka pertama: ");
+            System.out.print("Masukan angka pertama (-1000 s.d 1000): ");
             if (!scannerValue1.hasNextInt()) {
                 System.out.println("Input angka pertama harus angka");
                 continue;
@@ -16,7 +16,7 @@ public class Calculator {
 
             String value1 = scannerValue1.nextLine();
             int intOfValue1 = Integer.parseInt(value1);
-            if (intOfValue1 <= -1000 || intOfValue1 >= 1000) {
+            if (intOfValue1 < -1000 || intOfValue1 > 1000) {
                 System.out.println("Angka harus antara -1000 dan 1000");
                 continue;
             }
@@ -24,7 +24,7 @@ public class Calculator {
             /// /////////////////////////////////////////////////////////////
 
             Scanner scannerValue2 = new Scanner(System.in);
-            System.out.print("Masukan angka kedua: ");
+            System.out.print("Masukan angka kedua (-1000 s.d 1000): ");
             if (!scannerValue2.hasNextInt()) {
                 System.out.println("Input angka kedua harus angka");
                 continue;
@@ -32,13 +32,12 @@ public class Calculator {
 
             String value2 = scannerValue2.nextLine();
             int intOfValue2 = Integer.parseInt(value2);
-            if (intOfValue2 <= -1000 || intOfValue2 >= 1000) {
+            if (intOfValue2 < -1000 || intOfValue2 > 1000) {
                 System.out.println("Angka harus antara -1000 dan 1000");
                 continue;
             }
 
             /// /////////////////////////////////////////////////////////////
-
 
             System.out.println("Pilih perintah berikut: ");
             System.out.println("1. Kali");
